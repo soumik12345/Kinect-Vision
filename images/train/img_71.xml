@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Gesture1</folder>
+	<filename>img_71.jpg</filename>
+	<path>C:\Workspace\Projects\Programs\Python Programs\Data Science\tensorflow projects\Gesture Detection\Data\Gesture1\img_71.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Gesture1</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>928</xmin>
+			<ymin>103</ymin>
+			<xmax>1154</xmax>
+			<ymax>512</ymax>
+		</bndbox>
+	</object>
+</annotation>
