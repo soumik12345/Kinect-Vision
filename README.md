@@ -10,4 +10,4 @@
 
 ## Data Collection
 
-In order to collect and record data, run the script `get_data.py` using `python get_data.py <GESTURE_NAME> <NO_OF_FRAMES>. After running the script, place your gesture inside the gesture box. For better diversity in the data, move your hand slowly forward and backward and also try rotating your hand slightly.
+In order to collect and record data, run the script `get_data.py` using `python get_data.py <GESTURE_NAME> <NO_OF_FRAMES>`, for example, `python get_data.py Gesture3 1000` After running the script, place your gesture inside the gesture box. For better diversity in the data, move your hand slowly forward and backward and also try rotating your hand slightly.
