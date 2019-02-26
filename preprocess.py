@@ -34,29 +34,47 @@ def cluster(image):
     return y_pred
     # return cv2.bitwise_and(image, image, mask = y_pred)
 
-def red_channel(image):
-    img = image[:, :, 0]
-    edge = cv2.Canny(image, 100, 200)
-    return edge
+def invert(img):
+    m, n = img.shape
+    for i in range(m):
+        for j in range(n):
+            if img[i][j] == 1:
+                img[i][j] = 0
+            else:
+                img[i][j] = 1
+    return img
+
+def element_wise_multiply(img, mask):
+    m, n = img.shape
+    result = np.ones((m, n))
+    for i in range(m):
+        for j in range(n):
+            result[i][j] = img[i][j] * mask[i][j]
+    return result
 
 
-cap = cv2.VideoCapture('./Test Videos/Srinjoy.mp4')
+def preprocess_final(img):
+    red = img[:, :, 0]
+    X = img[:, :, 0].flatten()
+    X = np.reshape(X, (X.shape[0], 1))
+    y_pred = KMeans(n_clusters = 2, random_state = 10).fit_predict(X)
+    y_pred = y_pred.reshape(img.shape[0], img.shape[1])
+    mask = invert(y_pred)
+    return element_wise_multiply(red, mask)
 
-while(cap.isOpened()):
-    ret, frame = cap.read()
-    cv2.imshow('frame', segment_skin_2(frame))
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-cap.release()
-cv2.destroyAllWindows()
+
+# cap = cv2.VideoCapture('./Test Videos/Srinjoy.mp4')
+
+# while(cap.isOpened()):
+#     ret, frame = cap.read()
+#     cv2.imshow('frame', segment_skin_2(frame))
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
+# cap.release()
+# cv2.destroyAllWindows()
+
 
 # img = cv2.imread('Sign-Language-Digits-Dataset/Dataset/0/IMG_1118.JPG')
 
-# while True:
-#     cv2.imshow('Image', cluster(img))
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
-
-
-# plt.imshow(cluster(img), cmap = 'gray')
+# plt.imshow(preprocess_final(img), cmap = 'gray')
 # plt.show()

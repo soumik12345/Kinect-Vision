@@ -1,8 +1,8 @@
 import os, cv2
 from tqdm import tqdm
-from preprocess import red_channel
+from preprocess import preprocess_final
 
-DATASET_LOCATION = './Sign-Language-Digits-Dataset/Dataset/'
+DATASET_LOCATION = './Sign-Language-Digits-Dataset/Edited Dataset/'
 CLASSES = sorted(os.listdir(DATASET_LOCATION))
 PREPROCESSED_DATASET_LOCATION = './Sign-Language-Digits-Dataset/Preprocessed-Dataset/'
 
@@ -19,7 +19,7 @@ def preprocess_dataset():
         image_files = os.listdir(data_loc)
         c = 1
         for _file in tqdm(image_files):
-            image = red_channel(cv2.imread(data_loc + _file))
+            image = preprocess_final(cv2.imread(data_loc + _file))
             cv2.imwrite(PREPROCESSED_DATASET_LOCATION + _class + '/' + str(c) + '.jpg', image)
             c += 1
 
