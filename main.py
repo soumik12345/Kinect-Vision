@@ -48,6 +48,9 @@ def process(image):
 
 def main():
     cap = cv2.VideoCapture(0)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+    cap.set(cv2.CAP_PROP_FPS, 120)
     while cap.isOpened():
         try:
             ret, frame = cap.read()
