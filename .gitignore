@@ -1,2 +1,5 @@
 __pycache__/
 kinect_vision/
+test.py
+Data/
+.vscode/
