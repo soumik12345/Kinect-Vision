@@ -19,3 +19,7 @@ A computer vision based gesture detection system that automatically detects the 
 3. Tune the upper and lower thresholds using the trackbars unless the gestures are being detected accurately enough
 4. Once the detection is working satisfactorily, switch on `Game On` and open the game window
 5. If you want to change the control scheme, you can do so by editing the `config.json` file.
+
+## Demo
+
+<img src="https://github.com/soumik12345/Kinect-Vision/blob/master/output.gif">
