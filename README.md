@@ -16,7 +16,7 @@ A computer vision based gesture detection system that automatically detects the 
 
 1. Run the program using `python3 main.py` or `python main.py` or `ipython main.py`
 2. Select the Camera port (choose `0` if you are using a laptop)
-3. Tune the upper and lower thresholds using the trackbars unless the gestures are being detected accurately enough
+3. Tune the upper and lower thresholds using the trackbars unless the gestures are being detected accurately enough. Ideally the lower threshold is around `130` and the upper threshold is `255`.
 4. Once the detection is working satisfactorily, switch on `Game On` and open the game window
 5. If you want to change the control scheme, you can do so by editing the `config.json` file.
 
