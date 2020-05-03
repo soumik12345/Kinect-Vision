@@ -1,5 +1,7 @@
 # Kinect-Vision
 
+[![HitCount](http://hits.dwyl.com/soumik12345/Kinect-Vision.svg)](http://hits.dwyl.com/soumik12345/Kinect-Vision)
+
 A computer vision based gesture detection system that automatically detects the number of fingers as a hand gesture and enables you to control simple button pressing games using you hand gestures. Currently the system has been tested on the [**T-Rex Runner** game](http://www.trex-game.skipser.com/).
 
 <img src="https://github.com/soumik12345/Kinect-Vision/blob/master/2019-03-30%20(1).png">
